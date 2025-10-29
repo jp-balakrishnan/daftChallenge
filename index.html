@@ -252,25 +252,27 @@ Ready to create beautiful DAGs!</code></pre>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>pgm <span class="op">=</span> daft.PGM()</span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a title to the DAG</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>pgm.add_text(label<span class="op">=</span><span class="st">"Misguided Belief - Bacteria Theory (Late 19th Century)"</span>, x<span class="op">=-</span><span class="fl">0.65</span>, y<span class="op">=</span><span class="fl">2.5</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>pgm.add_node(<span class="st">"acid"</span>, <span class="st">"Acid"</span>, <span class="dv">0</span>, <span class="dv">2</span>, aspect <span class="op">=</span> <span class="fl">3.2</span>, scale <span class="op">=</span> <span class="dv">1</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"silver"</span>, <span class="st">"edgecolor"</span>: <span class="st">"black"</span>, <span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">'alpha'</span>: <span class="fl">0.4</span>})</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>pgm.add_plate([<span class="op">-</span><span class="fl">1.5</span>, <span class="op">-</span><span class="fl">0.5</span>, <span class="fl">5.8</span>, <span class="dv">3</span>])</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a title to the DAG</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>pgm.add_text(label<span class="op">=</span><span class="st">"Misguided Belief - Bacteria Theory (Late 19th Century)"</span>, x<span class="op">=-</span><span class="dv">1</span>, y<span class="op">=</span><span class="fl">2.6</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>pgm.add_node(<span class="st">"bif"</span>, <span class="st">"Bacteria in Food"</span>, <span class="fl">1.5</span>, <span class="dv">1</span>, aspect <span class="op">=</span> <span class="fl">3.5</span>, scale <span class="op">=</span> <span class="dv">1</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"lightgreen"</span>, <span class="st">"edgecolor"</span>: <span class="st">"green"</span>, <span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">'alpha'</span>: <span class="fl">0.5</span>})</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>pgm.add_node(<span class="st">"acid"</span>, <span class="st">"Acid"</span>, <span class="op">-</span><span class="fl">0.35</span>, <span class="dv">2</span>, aspect <span class="op">=</span> <span class="fl">3.2</span>, scale <span class="op">=</span> <span class="dv">1</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"silver"</span>, <span class="st">"edgecolor"</span>: <span class="st">"black"</span>, <span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">'alpha'</span>: <span class="fl">0.4</span>})</span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>pgm.add_node(<span class="st">"scurvy"</span>, <span class="st">"Scurvy"</span>, <span class="dv">3</span>, <span class="dv">0</span>, aspect <span class="op">=</span> <span class="fl">3.2</span>, scale <span class="op">=</span> <span class="dv">1</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"thistle"</span>, <span class="st">"edgecolor"</span>: <span class="st">"purple"</span>, <span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">'alpha'</span>: <span class="fl">0.7</span>})</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>pgm.add_node(<span class="st">"bif"</span>, <span class="st">"Bacteria in Food"</span>, <span class="fl">1.5</span>, <span class="dv">1</span>, aspect <span class="op">=</span> <span class="fl">3.5</span>, scale <span class="op">=</span> <span class="dv">1</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"lightgreen"</span>, <span class="st">"edgecolor"</span>: <span class="st">"green"</span>, <span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">'alpha'</span>: <span class="fl">0.5</span>})</span>
 <span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>pgm.add_edge(<span class="st">"acid"</span>, <span class="st">"bif"</span>, plot_params<span class="op">=</span>{<span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">"color"</span>: <span class="st">"gray"</span>})</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>pgm.add_edge(<span class="st">"bif"</span>, <span class="st">"scurvy"</span>, plot_params<span class="op">=</span>{<span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">"color"</span>: <span class="st">"gray"</span>})</span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>pgm.render()</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>pgm.add_node(<span class="st">"scurvy"</span>, <span class="st">"Scurvy"</span>, <span class="fl">3.2</span>, <span class="dv">0</span>, aspect <span class="op">=</span> <span class="fl">3.2</span>, scale <span class="op">=</span> <span class="dv">1</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"thistle"</span>, <span class="st">"edgecolor"</span>: <span class="st">"purple"</span>, <span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">'alpha'</span>: <span class="fl">0.7</span>})</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>pgm.add_edge(<span class="st">"acid"</span>, <span class="st">"bif"</span>, plot_params<span class="op">=</span>{<span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">"color"</span>: <span class="st">"gray"</span>})</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>pgm.add_edge(<span class="st">"bif"</span>, <span class="st">"scurvy"</span>, plot_params<span class="op">=</span>{<span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">"color"</span>: <span class="st">"gray"</span>})</span>
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>pgm.render()</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/dag-2-misguided-output-1.png" id="dag-2-misguided" width="629" height="387" class="figure-img"></p>
+<p><img src="index_files/figure-html/dag-2-misguided-output-1.png" id="dag-2-misguided" width="738" height="428" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -290,27 +292,29 @@ Ready to create beautiful DAGs!</code></pre>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> daft</span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>pgm <span class="op">=</span> daft.PGM()</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>pgm <span class="op">=</span> daft.PGM(dpi<span class="op">=</span><span class="dv">150</span>, alternate_style<span class="op">=</span><span class="st">"outer"</span>, observed_style<span class="op">=</span><span class="st">"inner"</span>)</span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a title to the DAG</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>pgm.add_text(label<span class="op">=</span><span class="st">"Simplified Modern Understanding (1930s onwards)"</span>, x<span class="op">=-</span><span class="fl">0.3</span>, y<span class="op">=</span><span class="fl">2.5</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>pgm.add_node(<span class="st">"vitc"</span>, <span class="st">"Vitamin C"</span>, <span class="fl">0.5</span>, <span class="dv">2</span>, aspect <span class="op">=</span> <span class="fl">3.4</span>, scale <span class="op">=</span> <span class="dv">1</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"lightblue"</span>, <span class="st">"edgecolor"</span>: <span class="st">"navy"</span>, <span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">'alpha'</span>: <span class="fl">0.6</span>})</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>pgm.add_plate([<span class="op">-</span><span class="fl">1.5</span>, <span class="op">-</span><span class="fl">0.6</span>, <span class="fl">5.8</span>, <span class="dv">3</span>])</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a title to the DAG</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>pgm.add_text(label<span class="op">=</span><span class="st">"Simplified Modern Understanding (1930s onwards)"</span>, x<span class="op">=-</span><span class="fl">0.9</span>, y<span class="op">=</span><span class="fl">2.5</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>pgm.add_node(<span class="st">"colSyn"</span>, <span class="st">"Collagen Synthesis"</span>, <span class="dv">2</span>, <span class="dv">1</span>, aspect <span class="op">=</span> <span class="fl">3.8</span>, scale <span class="op">=</span> <span class="dv">1</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"orange"</span>, <span class="st">"edgecolor"</span>: <span class="st">"brown"</span>, <span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">'alpha'</span>: <span class="fl">0.6</span>})</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>pgm.add_node(<span class="st">"vitc"</span>, <span class="st">"Vitamin C"</span>, <span class="op">-</span><span class="fl">0.3</span>, <span class="dv">2</span>, aspect <span class="op">=</span> <span class="fl">3.4</span>, scale <span class="op">=</span> <span class="dv">1</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"lightblue"</span>, <span class="st">"edgecolor"</span>: <span class="st">"navy"</span>, <span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">'alpha'</span>: <span class="fl">0.6</span>})</span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>pgm.add_node(<span class="st">"scurvy"</span>, <span class="st">"Scurvy"</span>, <span class="fl">3.5</span>, <span class="dv">0</span>, aspect <span class="op">=</span> <span class="fl">3.4</span>, scale <span class="op">=</span> <span class="dv">1</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"thistle"</span>, <span class="st">"edgecolor"</span>: <span class="st">"purple"</span>, <span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">'alpha'</span>: <span class="fl">0.7</span>})</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>pgm.add_node(<span class="st">"colSyn"</span>, <span class="st">"Collagen Synthesis"</span>, <span class="fl">1.5</span>, <span class="dv">1</span>, aspect <span class="op">=</span> <span class="fl">3.8</span>, scale <span class="op">=</span> <span class="dv">1</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"orange"</span>, <span class="st">"edgecolor"</span>: <span class="st">"brown"</span>, <span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">'alpha'</span>: <span class="fl">0.6</span>})</span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>pgm.add_edge(<span class="st">"vitc"</span>, <span class="st">"colSyn"</span>)</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>pgm.add_edge(<span class="st">"colSyn"</span>, <span class="st">"scurvy"</span>)</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>pgm.render()</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>pgm.add_node(<span class="st">"scurvy"</span>, <span class="st">"Scurvy"</span>, <span class="fl">3.2</span>, <span class="dv">0</span>, aspect <span class="op">=</span> <span class="fl">3.4</span>, scale <span class="op">=</span> <span class="dv">1</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"thistle"</span>, <span class="st">"edgecolor"</span>: <span class="st">"purple"</span>, <span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">'alpha'</span>: <span class="fl">0.7</span>})</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>pgm.add_edge(<span class="st">"vitc"</span>, <span class="st">"colSyn"</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>pgm.add_edge(<span class="st">"colSyn"</span>, <span class="st">"scurvy"</span>)</span>
 <span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>pgm.render()</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/dag-3-1928-output-1.png" id="dag-3-1928" width="608" height="387" class="figure-img"></p>
+<p><img src="index_files/figure-html/dag-3-1928-output-1.png" id="dag-3-1928" width="738" height="428" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -392,6 +396,84 @@ Figure&nbsp;1: Example: Professional DAFT Node Styling
 </div>
 </div>
 </div>
+</section>
+<section id="example-observed-and-alternate-node-styles" class="level3">
+<h3 class="anchored" data-anchor-id="example-observed-and-alternate-node-styles">Example: Observed and Alternate Node Styles</h3>
+<p>Here’s an example showing the different <code>observed_style</code> and <code>alternate_style</code> options:</p>
+<div class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> daft</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Row 1: Shaded style (default)</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>pgm1 <span class="op">=</span> daft.PGM(observed_style<span class="op">=</span><span class="st">"shaded"</span>, alternate_style<span class="op">=</span><span class="st">"shaded"</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>pgm1.add_node(<span class="st">"normal1"</span>, <span class="st">"Normal"</span>, <span class="dv">0</span>, <span class="dv">2</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"lightblue"</span>})</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>pgm1.add_node(<span class="st">"observed1"</span>, <span class="st">"Observed"</span>, <span class="dv">2</span>, <span class="dv">2</span>, observed<span class="op">=</span><span class="va">True</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"lightgreen"</span>})</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>pgm1.add_node(<span class="st">"alt1"</span>, <span class="st">"Alternate"</span>, <span class="dv">4</span>, <span class="dv">2</span>, alternate<span class="op">=</span><span class="va">True</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"yellow"</span>})</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Row 2: Inner style</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>pgm2 <span class="op">=</span> daft.PGM(observed_style<span class="op">=</span><span class="st">"inner"</span>, alternate_style<span class="op">=</span><span class="st">"inner"</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>pgm2.add_node(<span class="st">"normal2"</span>, <span class="st">"Normal"</span>, <span class="dv">0</span>, <span class="dv">0</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"lightblue"</span>})</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>pgm2.add_node(<span class="st">"observed2"</span>, <span class="st">"Observed"</span>, <span class="dv">2</span>, <span class="dv">0</span>, observed<span class="op">=</span><span class="va">True</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"lightgreen"</span>})</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>pgm2.add_node(<span class="st">"alt2"</span>, <span class="st">"Alternate"</span>, <span class="dv">4</span>, <span class="dv">0</span>, alternate<span class="op">=</span><span class="va">True</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"yellow"</span>})</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Row 3: Outer style</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>pgm3 <span class="op">=</span> daft.PGM(observed_style<span class="op">=</span><span class="st">"outer"</span>, alternate_style<span class="op">=</span><span class="st">"outer"</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>pgm3.add_node(<span class="st">"normal3"</span>, <span class="st">"Normal"</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">2</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"lightblue"</span>})</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>pgm3.add_node(<span class="st">"observed3"</span>, <span class="st">"Observed"</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">2</span>, observed<span class="op">=</span><span class="va">True</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"lightgreen"</span>})</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>pgm3.add_node(<span class="st">"alt3"</span>, <span class="st">"Alternate"</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">2</span>, alternate<span class="op">=</span><span class="va">True</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"yellow"</span>})</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Render all three</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>pgm1.render()</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>pgm2.render()</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>pgm3.render()</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="fig-node-styles" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="6">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-node-styles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display">
+<div id="fig-node-styles-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-node-styles-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-node-styles-output-1.png" data-ref-parent="fig-node-styles" width="591" height="112" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-node-styles-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Example: Observed and Alternate Node Styles
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div id="fig-node-styles-2" class="quarto-float quarto-figure quarto-figure-center anchored" height="112" width="591">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-node-styles-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-node-styles-output-2.png" id="fig-node-styles-2" data-ref-parent="fig-node-styles" width="591" height="112" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-node-styles-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div id="fig-node-styles-3" class="quarto-float quarto-figure quarto-figure-center anchored" height="319" width="591">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-node-styles-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-node-styles-output-3.png" id="fig-node-styles-3" data-ref-parent="fig-node-styles" width="591" height="319" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-node-styles-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-node-styles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2
+</figcaption>
+</figure>
+</div>
+</div>
+<p><strong>Explanation:</strong> - <strong>Normal nodes</strong>: Standard single-circle nodes - <strong>Observed nodes</strong> (<code>observed=True</code>): Styled according to <code>observed_style</code> parameter - <code>"shaded"</code>: Filled/darker appearance - <code>"inner"</code>: Double circle with inner ring - <code>"outer"</code>: Double circle with outer ring - <strong>Alternate nodes</strong> (<code>alternate=True</code>): Styled according to <code>alternate_style</code> parameter (same options as observed)</p>
 <p><strong>Key Styling Parameters:</strong></p>
 <ul>
 <li><code>facecolor</code>: Background color of the node</li>

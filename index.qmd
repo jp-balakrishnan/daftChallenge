@@ -147,14 +147,16 @@ import daft
 
 pgm = daft.PGM()
 
-# Add a title to the DAG
-pgm.add_text(label="Misguided Belief - Bacteria Theory (Late 19th Century)", x=-0.65, y=2.5, fontsize=10)
+pgm.add_plate([-1.5, -0.5, 5.8, 3])
 
-pgm.add_node("acid", "Acid", 0, 2, aspect = 3.2, scale = 1, plot_params={"facecolor": "silver", "edgecolor": "black", "linewidth": 2, 'alpha': 0.4})
+# Add a title to the DAG
+pgm.add_text(label="Misguided Belief - Bacteria Theory (Late 19th Century)", x=-1, y=2.6, fontsize=10)
+
+pgm.add_node("acid", "Acid", -0.35, 2, aspect = 3.2, scale = 1, plot_params={"facecolor": "silver", "edgecolor": "black", "linewidth": 2, 'alpha': 0.4})
 
 pgm.add_node("bif", "Bacteria in Food", 1.5, 1, aspect = 3.5, scale = 1, plot_params={"facecolor": "lightgreen", "edgecolor": "green", "linewidth": 2, 'alpha': 0.5})
 
-pgm.add_node("scurvy", "Scurvy", 3, 0, aspect = 3.2, scale = 1, plot_params={"facecolor": "thistle", "edgecolor": "purple", "linewidth": 2, 'alpha': 0.7})
+pgm.add_node("scurvy", "Scurvy", 3.2, 0, aspect = 3.2, scale = 1, plot_params={"facecolor": "thistle", "edgecolor": "purple", "linewidth": 2, 'alpha': 0.7})
 
 pgm.add_edge("acid", "bif", plot_params={"linewidth": 2, "color": "gray"})
 pgm.add_edge("bif", "scurvy", plot_params={"linewidth": 2, "color": "gray"})
@@ -186,16 +188,18 @@ plt.show()
 
 import daft
 
-pgm = daft.PGM()
+pgm = daft.PGM(dpi=150, alternate_style="outer", observed_style="inner")
+
+pgm.add_plate([-1.5, -0.6, 5.8, 3])
 
 # Add a title to the DAG
-pgm.add_text(label="Simplified Modern Understanding (1930s onwards)", x=-0.3, y=2.5, fontsize=10)
+pgm.add_text(label="Simplified Modern Understanding (1930s onwards)", x=-0.9, y=2.5, fontsize=10)
 
-pgm.add_node("vitc", "Vitamin C", 0.5, 2, aspect = 3.4, scale = 1, plot_params={"facecolor": "lightblue", "edgecolor": "navy", "linewidth": 2, 'alpha': 0.6})
+pgm.add_node("vitc", "Vitamin C", -0.3, 2, aspect = 3.4, scale = 1, plot_params={"facecolor": "lightblue", "edgecolor": "navy", "linewidth": 2, 'alpha': 0.6})
 
-pgm.add_node("colSyn", "Collagen Synthesis", 2, 1, aspect = 3.8, scale = 1, plot_params={"facecolor": "orange", "edgecolor": "brown", "linewidth": 2, 'alpha': 0.6})
+pgm.add_node("colSyn", "Collagen Synthesis", 1.5, 1, aspect = 3.8, scale = 1, plot_params={"facecolor": "orange", "edgecolor": "brown", "linewidth": 2, 'alpha': 0.6})
 
-pgm.add_node("scurvy", "Scurvy", 3.5, 0, aspect = 3.4, scale = 1, plot_params={"facecolor": "thistle", "edgecolor": "purple", "linewidth": 2, 'alpha': 0.7})
+pgm.add_node("scurvy", "Scurvy", 3.2, 0, aspect = 3.4, scale = 1, plot_params={"facecolor": "thistle", "edgecolor": "purple", "linewidth": 2, 'alpha': 0.7})
 
 pgm.add_edge("vitc", "colSyn")
 pgm.add_edge("colSyn", "scurvy")
@@ -265,6 +269,51 @@ pgm.add_edge("vitamin_c", "health")
 
 pgm.render()
 ```
+
+### Example: Observed and Alternate Node Styles
+
+Here's an example showing the different `observed_style` and `alternate_style` options:
+
+```{python}
+#| label: fig-node-styles
+#| echo: true
+#| fig-cap: "Example: Observed and Alternate Node Styles"
+
+import daft
+import matplotlib.pyplot as plt
+
+# Row 1: Shaded style (default)
+pgm1 = daft.PGM(observed_style="shaded", alternate_style="shaded")
+pgm1.add_node("normal1", "Normal", 0, 2, plot_params={"facecolor": "lightblue"})
+pgm1.add_node("observed1", "Observed", 2, 2, observed=True, plot_params={"facecolor": "lightgreen"})
+pgm1.add_node("alt1", "Alternate", 4, 2, alternate=True, plot_params={"facecolor": "yellow"})
+
+# Row 2: Inner style
+pgm2 = daft.PGM(observed_style="inner", alternate_style="inner")
+pgm2.add_node("normal2", "Normal", 0, 0, plot_params={"facecolor": "lightblue"})
+pgm2.add_node("observed2", "Observed", 2, 0, observed=True, plot_params={"facecolor": "lightgreen"})
+pgm2.add_node("alt2", "Alternate", 4, 0, alternate=True, plot_params={"facecolor": "yellow"})
+
+# Row 3: Outer style
+pgm3 = daft.PGM(observed_style="outer", alternate_style="outer")
+pgm3.add_node("normal3", "Normal", 0, -2, plot_params={"facecolor": "lightblue"})
+pgm3.add_node("observed3", "Observed", 2, -2, observed=True, plot_params={"facecolor": "lightgreen"})
+pgm3.add_node("alt3", "Alternate", 4, -2, alternate=True, plot_params={"facecolor": "yellow"})
+
+# Render all three
+pgm1.render()
+pgm2.render()
+pgm3.render()
+plt.show()
+```
+
+**Explanation:**
+- **Normal nodes**: Standard single-circle nodes
+- **Observed nodes** (`observed=True`): Styled according to `observed_style` parameter
+  - `"shaded"`: Filled/darker appearance
+  - `"inner"`: Double circle with inner ring
+  - `"outer"`: Double circle with outer ring
+- **Alternate nodes** (`alternate=True`): Styled according to `alternate_style` parameter (same options as observed)
 
 **Key Styling Parameters:**
 

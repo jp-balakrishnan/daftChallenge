@@ -252,10 +252,10 @@ Ready to create beautiful DAGs!</code></pre>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>pgm <span class="op">=</span> daft.PGM()</span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>pgm.add_plate([<span class="op">-</span><span class="fl">1.5</span>, <span class="op">-</span><span class="fl">0.5</span>, <span class="fl">5.8</span>, <span class="dv">3</span>])</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>pgm.add_plate([<span class="op">-</span><span class="fl">1.5</span>, <span class="op">-</span><span class="fl">0.5</span>, <span class="fl">5.8</span>, <span class="fl">3.3</span>])</span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a title to the DAG</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>pgm.add_text(label<span class="op">=</span><span class="st">"Misguided Belief - Bacteria Theory (Late 19th Century)"</span>, x<span class="op">=-</span><span class="dv">1</span>, y<span class="op">=</span><span class="fl">2.6</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>pgm.add_text(label<span class="op">=</span><span class="st">"Misguided Belief - Bacteria Theory (Late 19th Century)"</span>, x<span class="op">=-</span><span class="dv">1</span>, y<span class="op">=</span><span class="fl">2.5</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>pgm.add_node(<span class="st">"acid"</span>, <span class="st">"Acid"</span>, <span class="op">-</span><span class="fl">0.35</span>, <span class="dv">2</span>, aspect <span class="op">=</span> <span class="fl">3.2</span>, scale <span class="op">=</span> <span class="dv">1</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"silver"</span>, <span class="st">"edgecolor"</span>: <span class="st">"black"</span>, <span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">'alpha'</span>: <span class="fl">0.4</span>})</span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
@@ -272,7 +272,7 @@ Ready to create beautiful DAGs!</code></pre>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/dag-2-misguided-output-1.png" id="dag-2-misguided" width="738" height="428" class="figure-img"></p>
+<p><img src="index_files/figure-html/dag-2-misguided-output-1.png" id="dag-2-misguided" width="738" height="443" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -294,10 +294,10 @@ Ready to create beautiful DAGs!</code></pre>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>pgm <span class="op">=</span> daft.PGM(dpi<span class="op">=</span><span class="dv">150</span>, alternate_style<span class="op">=</span><span class="st">"outer"</span>, observed_style<span class="op">=</span><span class="st">"inner"</span>)</span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>pgm.add_plate([<span class="op">-</span><span class="fl">1.5</span>, <span class="op">-</span><span class="fl">0.6</span>, <span class="fl">5.8</span>, <span class="dv">3</span>])</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>pgm.add_plate([<span class="op">-</span><span class="fl">1.5</span>, <span class="op">-</span><span class="fl">0.6</span>, <span class="fl">5.8</span>, <span class="fl">3.35</span>])</span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a title to the DAG</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>pgm.add_text(label<span class="op">=</span><span class="st">"Simplified Modern Understanding (1930s onwards)"</span>, x<span class="op">=-</span><span class="fl">0.9</span>, y<span class="op">=</span><span class="fl">2.5</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>pgm.add_text(label<span class="op">=</span><span class="st">"Simplified Modern Understanding (1930s onwards)"</span>, x<span class="op">=-</span><span class="fl">0.9</span>, y<span class="op">=</span><span class="fl">2.46</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>pgm.add_node(<span class="st">"vitc"</span>, <span class="st">"Vitamin C"</span>, <span class="op">-</span><span class="fl">0.3</span>, <span class="dv">2</span>, aspect <span class="op">=</span> <span class="fl">3.4</span>, scale <span class="op">=</span> <span class="dv">1</span>, plot_params<span class="op">=</span>{<span class="st">"facecolor"</span>: <span class="st">"lightblue"</span>, <span class="st">"edgecolor"</span>: <span class="st">"navy"</span>, <span class="st">"linewidth"</span>: <span class="dv">2</span>, <span class="st">'alpha'</span>: <span class="fl">0.6</span>})</span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
@@ -314,7 +314,7 @@ Ready to create beautiful DAGs!</code></pre>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/dag-3-1928-output-1.png" id="dag-3-1928" width="738" height="428" class="figure-img"></p>
+<p><img src="index_files/figure-html/dag-3-1928-output-1.png" id="dag-3-1928" width="738" height="449" class="figure-img"></p>
 </figure>
 </div>
 </div>

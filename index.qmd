@@ -147,10 +147,10 @@ import daft
 
 pgm = daft.PGM()
 
-pgm.add_plate([-1.5, -0.5, 5.8, 3])
+pgm.add_plate([-1.5, -0.5, 5.8, 3.3])
 
 # Add a title to the DAG
-pgm.add_text(label="Misguided Belief - Bacteria Theory (Late 19th Century)", x=-1, y=2.6, fontsize=10)
+pgm.add_text(label="Misguided Belief - Bacteria Theory (Late 19th Century)", x=-1, y=2.5, fontsize=10)
 
 pgm.add_node("acid", "Acid", -0.35, 2, aspect = 3.2, scale = 1, plot_params={"facecolor": "silver", "edgecolor": "black", "linewidth": 2, 'alpha': 0.4})
 
@@ -190,10 +190,10 @@ import daft
 
 pgm = daft.PGM(dpi=150, alternate_style="outer", observed_style="inner")
 
-pgm.add_plate([-1.5, -0.6, 5.8, 3])
+pgm.add_plate([-1.5, -0.6, 5.8, 3.35])
 
 # Add a title to the DAG
-pgm.add_text(label="Simplified Modern Understanding (1930s onwards)", x=-0.9, y=2.5, fontsize=10)
+pgm.add_text(label="Simplified Modern Understanding (1930s onwards)", x=-0.9, y=2.46, fontsize=10)
 
 pgm.add_node("vitc", "Vitamin C", -0.3, 2, aspect = 3.4, scale = 1, plot_params={"facecolor": "lightblue", "edgecolor": "navy", "linewidth": 2, 'alpha': 0.6})
 

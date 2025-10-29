@@ -111,7 +111,7 @@ import daft
 pgm = daft.PGM()
 
 # Add a title to the DAG
-pgm.add_text(label="Simplified Lind's Model (1747)", x=0, y=0.5, fontsize=8)
+pgm.add_text(label="Simplified Lind's Model (1747)", x=-0.15, y=0.5, fontsize=8)
 
 pgm.add_node("lemons", "Lemons", 0, 0, aspect = 2, scale = 1, plot_params={"facecolor": "yellow", "edgecolor": "brown", "linewidth": 2, 'alpha': 0.4})
 
@@ -148,7 +148,7 @@ import daft
 pgm = daft.PGM()
 
 # Add a title to the DAG
-pgm.add_text(label="Misguided Belief - Bacteria Theory (Late 19th Century)", x=-0.5, y=2.5, fontsize=10)
+pgm.add_text(label="Misguided Belief - Bacteria Theory (Late 19th Century)", x=-0.65, y=2.5, fontsize=10)
 
 pgm.add_node("acid", "Acid", 0, 2, aspect = 3.2, scale = 1, plot_params={"facecolor": "silver", "edgecolor": "black", "linewidth": 2, 'alpha': 0.4})
 
@@ -156,8 +156,8 @@ pgm.add_node("bif", "Bacteria in Food", 1.5, 1, aspect = 3.5, scale = 1, plot_pa
 
 pgm.add_node("scurvy", "Scurvy", 3, 0, aspect = 3.2, scale = 1, plot_params={"facecolor": "thistle", "edgecolor": "purple", "linewidth": 2, 'alpha': 0.7})
 
-pgm.add_edge("acid", "bif")
-pgm.add_edge("bif", "scurvy")
+pgm.add_edge("acid", "bif", plot_params={"linewidth": 2, "color": "gray"})
+pgm.add_edge("bif", "scurvy", plot_params={"linewidth": 2, "color": "gray"})
 
 pgm.render()
 
@@ -189,13 +189,13 @@ import daft
 pgm = daft.PGM()
 
 # Add a title to the DAG
-pgm.add_text(label="Simplified Modern Understanding (1930s onwards)", x=-0.5, y=2.5, fontsize=10)
+pgm.add_text(label="Simplified Modern Understanding (1930s onwards)", x=-0.3, y=2.5, fontsize=10)
 
-pgm.add_node("vitc", "Vitamin C", 0, 2, aspect = 3.4, scale = 1, plot_params={"facecolor": "lightblue", "edgecolor": "navy", "linewidth": 2, 'alpha': 0.6})
+pgm.add_node("vitc", "Vitamin C", 0.5, 2, aspect = 3.4, scale = 1, plot_params={"facecolor": "lightblue", "edgecolor": "navy", "linewidth": 2, 'alpha': 0.6})
 
-pgm.add_node("colSyn", "Collagen Synthesis", 1.5, 1, aspect = 3.8, scale = 1, plot_params={"facecolor": "orange", "edgecolor": "brown", "linewidth": 2, 'alpha': 0.6})
+pgm.add_node("colSyn", "Collagen Synthesis", 2, 1, aspect = 3.8, scale = 1, plot_params={"facecolor": "orange", "edgecolor": "brown", "linewidth": 2, 'alpha': 0.6})
 
-pgm.add_node("scurvy", "Scurvy", 3, 0, aspect = 3.4, scale = 1, plot_params={"facecolor": "thistle", "edgecolor": "purple", "linewidth": 2, 'alpha': 0.7})
+pgm.add_node("scurvy", "Scurvy", 3.5, 0, aspect = 3.4, scale = 1, plot_params={"facecolor": "thistle", "edgecolor": "purple", "linewidth": 2, 'alpha': 0.7})
 
 pgm.add_edge("vitc", "colSyn")
 pgm.add_edge("colSyn", "scurvy")
